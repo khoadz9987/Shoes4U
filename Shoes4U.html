@@ -1,0 +1,162 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoes4U</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    /* RESET & BASE STYLES */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background-color: #f0f0f0; color: #1a1a1a; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    /* LAYOUT CHÍNH */
+    .wrapper { max-width: 1280px; margin: 40px auto; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+
+    /* HEADER */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 24px 64px; }
+    .logo { font-size: 56px; font-weight: 900; text-transform: uppercase; }
+    .nav-links { display: flex; gap: 40px; }
+    .nav-links a { font-size: 16px; font-weight: 500; }
+
+    /* HERO SECTION */
+    .hero { background: #FAFAFA; text-align: center; padding: 120px 64px; }
+    .hero h1 { font-size: 64px; font-weight: 700; margin-bottom: 24px; }
+    .hero p { font-size: 24px; font-weight: 500; max-width: 600px; margin: 0 auto 32px auto; color: #333; }
+    .btn-shop { display: inline-block; padding: 12px 32px; background: black; color: white; border-radius: 12px; font-size: 18px; font-weight: 500; transition: opacity 0.3s; }
+    .btn-shop:hover { opacity: 0.8; }
+
+    /* FEATURED SECTION */
+    .featured { padding: 80px 64px; }
+    .featured-titles { margin-bottom: 40px; }
+    .featured-titles h2 { font-size: 36px; font-weight: 700; margin-bottom: 8px; }
+    .featured-titles p { font-size: 24px; font-weight: 700; color: #4E4E4E; }
+    
+    .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px; }
+    .product-card { display: flex; flex-direction: column; gap: 16px; }
+    .product-card img { width: 100%; height: 480px; object-fit: cover; border-radius: 16px; }
+    .product-info h3 { font-size: 32px; font-weight: 600; }
+    .product-info p { font-size: 24px; font-weight: 500; color: rgba(0, 0, 0, 0.55); }
+
+    /* BENEFITS SECTION */
+    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 48px; padding: 40px 64px 120px 64px; }
+    .benefit-item { padding-top: 24px; border-top: 1px solid rgba(0, 0, 0, 0.15); }
+    .benefit-item h4 { font-size: 24px; font-weight: 600; margin-bottom: 16px; }
+    .benefit-item p { font-size: 16px; font-weight: 500; color: rgba(0, 0, 0, 0.55); line-height: 1.5; }
+
+    /* FOOTER */
+    footer { display: flex; justify-content: space-between; align-items: center; padding: 64px; border-top: 1px solid rgba(0, 0, 0, 0.1); flex-wrap: wrap; gap: 32px; }
+    .footer-left { display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+    .footer-brand { display: flex; align-items: center; gap: 8px; font-size: 20px; font-weight: 600; }
+    .footer-brand img { width: 32px; height: 32px; border-radius: 8px; }
+    .footer-nav { display: flex; gap: 32px; }
+    .footer-nav a { font-size: 16px; font-weight: 500; color: rgba(0, 0, 0, 0.55); }
+    .socials { display: flex; gap: 24px; }
+    .social-icon { width: 24px; height: 24px; background: rgba(0, 0, 0, 0.45); border-radius: 4px; } /* Cục đen giữ chỗ mxh */
+
+    /* RESPONSIVE CƠ BẢN */
+    @media (max-width: 768px) {
+      header, .hero, .featured, .benefits, footer { padding-left: 24px; padding-right: 24px; }
+      .logo { font-size: 32px; }
+      .hero h1 { font-size: 40px; }
+      .hero p, .featured-titles p { font-size: 18px; }
+      .featured-titles h2 { font-size: 28px; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+	
+	.socials { display: flex; gap: 24px; align-items: center; }
+	.socials a { color: rgba(0, 0, 0, 0.55); font-size: 24px; transition: color 0.3s ease; }
+	.socials a:hover { color: #1a1a1a; }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+  
+  <header>
+    <div class="logo">SHOES4U</div>
+    <nav class="nav-links">
+      <a href="#">Contact</a>
+      <a href="#">Product</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Step Into Style</h1>
+    <p>Discover our collection of premium footwear designed for comfort, style, and performance.</p>
+    <a href="#" class="btn-shop">Shop now</a>
+  </section>
+
+  <section class="featured">
+    <div class="featured-titles">
+      <h2>Featured collection</h2>
+      <p>Hand-picked favorites just for you</p>
+    </div>
+    
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://img01.ztat.net/article/spp-media-p1/fcc16877a5ee4758b205eea1af5ea052/2dc6a29a058148b8b8fd57c77e2c396a.jpg?imwidth=762&filter=packshot" alt="Cloud Walker Sneaker">
+        <div class="product-info">
+          <h3>Cloud Walker</h3>
+          <p>Sneaker</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/9bbf2dc7daa042298f0e7eec714b5708_9366/ADIZERO_EVO_SL_EXO_Shoes_Black_KI4764_HM3_hover.jpg" alt="Night Runner">
+        <div class="product-info">
+          <h3>Night Runner</h3>
+          <p>Running</p>
+        </div>
+      </div>
+      
+      <div class="product-card">
+        <img src="https://madshoes.vn/wp-content/uploads/2021/10/giay-boot-nam-vintage.jpg" alt="Heritage Boots">
+        <div class="product-info">
+          <h3>Heritage Boots</h3>
+          <p>Boots</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefits">
+    <div class="benefit-item">
+      <h4>Premium Quality</h4>
+      <p>Handpicked materials and expert craftsmanship</p>
+    </div>
+    <div class="benefit-item">
+      <h4>Free Shipping</h4>
+      <p>On all orders over $100 worldwide</p>
+    </div>
+    <div class="benefit-item">
+      <h4>Easy Returns</h4>
+      <p>30-day return policy, no questions asked</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-left">
+      <div class="footer-brand">
+        <span>SHOES4U</span>
+      </div>
+      <nav class="footer-nav">
+        <a href="#">Company</a>
+        <a href="#">Learn more</a>
+        <a href="#">Support</a>
+      </nav>
+    </div>
+    <div class="socials">
+	  <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+	  <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+	  <a href="#" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+	</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
